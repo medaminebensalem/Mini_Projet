@@ -1,0 +1,302 @@
+<?php
+// Connexion à la base de données
+$host = 'localhost';
+$user = 'root';
+$pass = '';
+$dbname = 'akabd';
+
+$conn = new mysqli($host, $user, $pass, $dbname);
+
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die('Connexion échouée : ' . $conn->connect_error);
+}
+
+// Traitement du formulaire
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nom = htmlspecialchars($_POST['nom']);
+    $email = htmlspecialchars($_POST['email']);
+    $sujet = htmlspecialchars($_POST['sujet']);
+    $message = htmlspecialchars($_POST['message']);
+
+    $stmt = $conn->prepare("INSERT INTO messages (nom, email, sujet, message) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $nom, $email, $sujet, $message);
+
+    if ($stmt->execute()) {
+        echo "<p style='color: green;'>Message envoyé avec succès !</p>";
+    } else {
+        echo "<p style='color: red;'>Erreur : " . $stmt->error . "</p>";
+    }
+
+    $stmt->close();
+}
+$conn->close();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKA Sport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+    <header>
+      <div class="wrapper"> 
+          <h1>AKA sport <span class="orange">.</span></h1>
+          <nav>
+              <ul>
+                  <li><a href="#main-image">CONCEPT</a></li>
+                  <li><a href="#steps">ABONNEMENT</a></li>
+                  <li><a href="#abonement">LES CLUBS</a></li>
+                  <li><a href="#possibilite">ACTIVITE</a></li>
+                  <li><a href="#contact">FP HEROES</a></li>
+              </ul>
+          </nav>
+      </div>
+     </header>
+  
+
+    <section id="main-image">
+			<div class="wrapper">
+                <h2 class="amin">Élève ton entraînement <br><strong class="tariq">et repousse tes limites avec AKA sport</strong></h2>
+                <strong><a href="auth/register.php" class="button-1">S'INCRIRE</a></strong>
+			</div>
+	</section>
+
+
+        <section id="hamid">
+            <h1 class="texte-principal"> Fitness Park Salé : <hr class="ligne"> <br>  <h1 class="titre">Un Nouveau Chapitre pour la Communauté du Fitness</h1></h1>
+            <div class="list-group1">
+            </div>
+            <div class="list-group2">
+                <p class="paraghraphe">Le 1er août dernier, Fitness Park a franchi une nouvelle étape importante avec l'ouverture officielle de notre club à Salé <br> Cet événement a été marqué par une ambiance festive, avec des démonstrations sportives,<br> des animations dynamiques, et la visite de nombreux passionnés de fitness venus découvrir nos infrastructures <br> de haut niveau. Grâce à un accueil chaleureux et à une équipe dévouée, cette journée a permis à la communauté de se <br> rassembler autour de nos valeurs de dépassement de soi et de convivialité</p>
+                <p  class="paraghraphe">L’accueil chaleureux réservé à tous les visiteurs a parfaitement reflété nos valeurs de dépassement de soi, de solidarité et <br> d’inclusion. Notre équipe, pleinement investie, a veillé à ce que chaque participant <br> se sente intégré à cette grande communauté qu’est Fitness Park. Au-delà des infrastructures ultramodernes, c’est  <br>cet esprit de famille et d’entraide qui fait la force de notre réseau.</p>
+                <p  class="paraghraphe">Le club de Salé est déjà devenu un lieu incontournable pour les amateurs de fitness de la région, renforçant notre engagement <br> à rendre l’expérience Fitness Park accessible à tous. Avec des équipements modernes, un  <br>accès multi-club, des cours collectifs variés et une ouverture de 6h à 23h, 7 jours sur 7, nous sommes prêts à  <br>accompagner les gens dans leurs objectifs tout au long de l’année.</p>
+                <p  class="paraghraphe">Que vous soyez un passionné de sport chevronné ou que vous cherchiez simplement à retrouver la forme, Fitness Park Salé est là <br>pour vous accompagner dans la réalisation de vos objectifs. Grâce à un environnement  <br>motivant et stimulant, chacun pourra s'entraîner à son rythme, dans une ambiance positive et conviviale</p>
+            </div>
+         </section>
+
+
+
+        <section id="abonement">
+            <div class="maClasse">
+                <h1 class="texte-principal">Trouve facilement <br>
+                    l’abonnement qui te convient.</h1>
+                    <hr class="ligne">
+                <p class="texte">Atteints tes objectifs sportifs dans une de nos salles Fitness Park au Maroc.  <br> Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, Musculation, Cross-training <br> et Cours Collectifs pour effectuer tous tes entraînements !</p>
+            </div>
+            <div class="explore_gride">
+                <div class="explore_card">
+                    <h3 class="offre2">OFFRE</h3>
+                    <h3 class="offre3">Classique</h3>
+                    <h1 class="prix1">290DHS</h1>
+                    <p class="texte1">Le premier prix de notre salle de sport offre un accès illimité aux installations de base à un tarif abordable</p>
+                </div>
+                <div class="explore_card">
+                    <h3 class="offre2">SANS </h3>
+                    <h3 class="offre3">ENGAGEMENT</h3>
+                    <h1 class="prix1">390DHS</h1>
+                    <p class="texte1">Le premier mois à 290DHS
+                        Frais d'adhésion de 300DHS
+                        Sans engagement</p>
+                </div>
+                <div class="explore_card">
+                    <h3 class="offre2">OFFRE</h3>
+                    <h3 class="offre3">JEUNE</h3>
+                    <h1 class="prix1">190DHS</h1>
+                    <p class="texte1">Le premier mois à 90DHS
+                        Frais d'adhésion de 300DHS
+                        Engagement de 12 mois</p>
+                </div>
+            </div>
+
+      </section>  
+            
+
+        
+        <section id="possibilite">
+        <div class="maClasse">
+            <h1 class="texte-principal"> Toutes les Activités <br>
+                du Centre Fitness AKA Sport !</h1>
+                <hr class="ligne">
+            <p class="texte">Atteints tes objectifs sportifs dans une de nos salles Fitness Park au Maroc.  <br> Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, Musculation, Cross-training <br> et Cours Collectifs pour effectuer tous tes entraînements !</p>
+        </div>
+        <div class="continaire">
+            <section class="about">
+                
+                <div class="kora2">
+                    <div class="about_image">
+                    <img src="photo finess/article-image-2.jpg" alt="about">
+                </div>
+            </div>
+                
+                <div class="about_contant">
+                    <h4 class="offre4">kick <h3 class="offre5">boxing:</h3></h4> 
+                    <p> Atteints tes objectifs sportifs dans une de nos salles Fitness Park au 
+                        Maroc. Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio,
+                        Musculation,  Cross-training  et Cours Collectifs pour effectuer tous tes entraînements </p>
+                        <a href="#" class="read_more">s'incrire</a>
+                </div>
+            </section>
+            </div>
+            <div class="continaire">
+            <section class="about">
+               
+                <div class="about_contant">
+                    <h4 class="offre4">karate <h3 class="offre5">contact :</h3></h4> 
+                    <p> Atteints tes objectifs sportifs dans une de nos salles Fitness Park au 
+                        Maroc. Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, 
+                        Musculation,  Cross-training  et Cours Collectifs pour effectuer tous tes entraînements </p>
+                        <a href="#" class="read_more">s'incrire</a>
+                </div>
+                <div class="kora"> 
+                    <div class="about_image">
+                    <img src="c:\Users\HP\Downloads\group-young-teens-celebrating-world-youth-day-by-doing-activities-together.jpg" alt="about">
+                </div>
+            </div>
+               
+            </section>
+            </div>
+            <div class="continaire">
+            <section class="about">
+                <div class="kora1">
+                    <div class="about_image">
+                    <img src="https://downloadscdn6.freepik.com/23/2149176/2149175410.jpg?filename=people-working-out-indoors-together-with-dumbbells.jpg&token=exp=1743859489~hmac=a3bb5fba91377de7a799807c155e2d5f" alt="about">
+                </div>
+            </div>
+                
+                <div class="about_contant">
+                    
+                    <h3 class="offre5">fitness:</h3>
+                    <p> Atteints tes objectifs sportifs dans une de nos salles Fitness Park au 
+                        Maroc. Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, 
+                        Musculation,  Cross-training  et Cours Collectifs pour effectuer tous tes entraînements </p>
+                        <a href="#" class="read_more">s'incrire</a>
+                </div>
+            </section>
+        </div>
+    
+</section> 
+
+<section id="steps">
+    <div>
+        <h1 class="texte-principal">Les Steps Fitness en Action !</h1>
+        <hr class="ligne">
+        <p class="texte2">    Découvrez une séance dynamique de step fitness, idéale  pour  <br>brûler des calories, tonifier tout le corps et booster votre énergie ! Chaque pas vous rapproche <br> de vos objectifs bien-être, le tout en musique et dans une ambiance motivante.</p>
+    </div>
+    <div class="explore_grid">
+        
+        <div class="explore_car">
+            <div class="explore_A">
+          
+            </div>
+            <h4 class="titre1">Ouvert 7j/7</h4>
+            <p>Vous gardez le contrôle.</p>
+        </div>
+        <div class="explore_car">
+            <div class="explore_B">
+          
+            </div>
+            <div class="div">
+                <h4 class="titre2">Équipement haut de gamme</h4>
+            <p class="p">Vous gardez le contrôle.</p>
+            </div>
+            
+        </div>
+        <div class="explore_car">
+            <div class="explore_C">
+          
+            </div>
+            <div class="div1">
+                <h4 class="titre3">Accès multiclub</h4>
+                <p class="p1">Vous gardez le contrôle.</p>
+            </div>
+           
+        </div>
+
+    </div>
+  
+</section>
+<section id="blogs">
+
+    <div class="bold">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <div class="italic">
+        <h1 class="underline">Actualités AKA sport</h1>
+        <hr>
+        <h3 class="upericase">DERNIERS ARTICLES</h3>
+        <hr>
+        <div class="explore_gride">
+        
+            <div class="explore_ca">
+               
+                <h4 class="titre1">Lifestyle</h4>
+                <p> Le lifestyle fitness intègre l'exercice, une alimentation saine et un équilibre mental. </p>
+            </div>
+            <div class="explore_car">
+               
+                <h4 class="titre2">Entraînements</h4>
+                <p>L'entraînement physique joue un rôle crucial dans le maintien d'une bonne santé et le bien-être général..</p>
+            </div>
+            <div class="explore_car">
+              
+                <h4 class="titre3">Actualités</h4>
+                <p>L'actualité du fitness met l'accent sur les entraînements à domicile, le HIIT, le yoga et l'utilisation d'applications pour suivre la santé, rendant l'exercice plus accessible et personnalisé..</p>
+            </div>
+    
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="wrappe2">
+        <h3>Contactez-nous</h3>
+    </div> 
+    <div class="con_tinaire">
+        <div class="forme">
+            
+
+            <div class="contact_info">
+                <h4 class="offre7">Chez :<h3 class="offre8">AKA sport.</h3> </h4> 
+                <p>Bienvenue chez <strong> Sport</strong>, le club où passion, discipline et performance se rencontrent ! Que vous souhaitiez améliorer votre condition physique, perfectionner vos techniques de combat ou simplement adopter un mode de vie plus actif, notre salle est faite pour vous.</p>
+         </div>
+         <div class="contact_form"> 
+         <form action="index.php" method="POST">
+        <label>Nom :</label><br>
+        <input type="text" name="nom" required><br><br>
+
+        <label>Email :</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Sujet :</label><br>
+        <input type="text" name="sujet" required><br><br>
+
+        <label>Message :</label><br>
+        <textarea name="message" rows="5" required></textarea><br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+     </div>
+               
+            </div>
+        </div>
+        
+    </div>
+</section>
+<footer>
+    <div class="wrapper">
+        <h1>AKA sport<span class="orange">.</span></h1>
+        <div class="copyright">Copyright © Tous droits réservés.</div>
+    </div>
+</footer>    
+        
+
+   
+      
+</body>
+</html>
