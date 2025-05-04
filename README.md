@@ -1,22 +1,22 @@
-# 🏋️‍♂️ Site Web de Salle de Sport
+# 🏋️‍♂️ Site Web de Salle de Sport   AKA Sport
 
-Ce projet est un **mini site web vitrine** pour une salle de sport fictive, développé dans un cadre pédagogique par [Ton Nom] et [Nom de ton camarade].
+Ce projet est un **mini site web ** pour une salle de sport fictive, développé dans un cadre pédagogique par Mohamed-Amine BEN SALEM et Tarik Chafik.
 
 ## 📌 Présentation
 
 Le site a pour objectif de présenter les services, les tarifs, les horaires, et l’équipe de la salle de sport, tout en offrant une interface moderne et responsive.
 
-## 👥 Équipe
+## 👥 groupe
 
-- **[Ton Nom]** – Développement frontend, design, intégration
-- **[Nom de ton camarade]** – Structure du site, contenu, responsive design
+-Mohamed-Amine BEN SALEM
+-Tarik Chafik
 
 ## 🛠️ Technologies utilisées
 
 - HTML5
 - CSS3
-- JavaScript (optionnel si vous en avez utilisé)
-- (Ajouter Bootstrap, Tailwind, etc., si applicable)
+- JavaScript 
+- php
 
 ## 📁 Structure du projet
 
