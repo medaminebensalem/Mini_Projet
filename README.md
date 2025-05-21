@@ -8,8 +8,8 @@ Le site a pour objectif de présenter les services, les tarifs, les horaires, et
 
 ##  groupe
 
--Mohamed-Amine BEN SALEM
--Tarik Chafik
+-Mohamed-Amine BEN SALEM.
+-Tarik Chafik.
 
 ##  Technologies utilisées
 
