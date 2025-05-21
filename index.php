@@ -151,7 +151,7 @@ $conn->close();
                     <p> Atteints tes objectifs sportifs dans une de nos salles Fitness Park au 
                         Maroc. Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, 
                         Musculation,  Cross-training  et Cours Collectifs pour effectuer tous tes entraînements </p>
-                        <a href="#" class="read_more">s'incrire</a>
+                        <a href="registration.php" class="read_more">s'incrire</a>
                 </div>
                 <div class="kora"> 
                     <div class="about_image">
@@ -165,7 +165,7 @@ $conn->close();
             <section class="about">
                 <div class="kora1">
                     <div class="about_image">
-                    <img src="https://downloadscdn6.freepik.com/23/2149176/2149175410.jpg?filename=people-working-out-indoors-together-with-dumbbells.jpg&token=exp=1743859489~hmac=a3bb5fba91377de7a799807c155e2d5f" alt="about">
+                    <img src="" alt="about">
                 </div>
             </div>
                 
@@ -175,7 +175,7 @@ $conn->close();
                     <p> Atteints tes objectifs sportifs dans une de nos salles Fitness Park au 
                         Maroc. Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, 
                         Musculation,  Cross-training  et Cours Collectifs pour effectuer tous tes entraînements </p>
-                        <a href="#" class="read_more">s'incrire</a>
+                        <a href="registration.php" class="read_more">s'incrire</a>
                 </div>
             </section>
         </div>

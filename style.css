@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
 }
-/*.main{
+.main{
     width: 100%;
    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(../project/anastase-maragos-FP7cfYPPUKM-unsplash.jpg);
    background-position: center;
    background-size: cover;
    height: 109vh;
-}*/
+}
 body 
 {
     font-family: Arial,sans-serif;
