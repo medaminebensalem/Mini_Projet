@@ -1,20 +1,20 @@
-*{
+  *{
     margin: 0;
     padding: 0;
 }
-.main{
+/*.main{
     width: 100%;
    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(../project/anastase-maragos-FP7cfYPPUKM-unsplash.jpg);
    background-position: center;
    background-size: cover;
    height: 109vh;
-}
+}*/
 body 
 {
     font-family: Arial,sans-serif;
     font-size: 15px;
 }
-/header/
+/*header*/
 header 
 {
     height: 100px;  
@@ -62,8 +62,7 @@ ul
 {
     height: 580px;
     
-    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(https://downloadscdn6.freepik.com/7502/5/4748.jpg?filename=shirtless-bodybuilder-posing-gym.jpg&token=exp=1744130529~hmac=916bad4fbe9309a3abeb4a17ccc92c14)center;
-    background-position: center;
+    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(image.jpg.jpg);
     background-size: cover;
    
     
@@ -212,7 +211,7 @@ ul
     grid-template-columns: repeat(4,1fr);
     gap: 2rem;
     padding-left: 150px;
-    margin-left: 50px;
+    margin-left: 150px;
     padding-bottom: 150px;
     margin-bottom: 150px;
     padding-left: 30px;
@@ -348,7 +347,7 @@ ul
    
     
 }
-/containaire/
+/*containaire*/
 .continaire{
     background-color: white;
     width: 90%;
@@ -445,7 +444,7 @@ ul
   
 }
 
-/steps/
+/*steps*/
 #steps ul
 {
     margin: 80px 0;
@@ -659,7 +658,7 @@ input[type="text"]
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
-/contactform/
+/*contactform*/
 .contact_form {
   background-color:black;
     width: 550px;
@@ -749,7 +748,7 @@ textarea.input{
 
 
 
-/contact_info/
+/*contact_info*/
 .contact_info{
     
     width: 500px;
@@ -785,7 +784,7 @@ padding-right: 100px;
 }
 
 .kora{
-    background-image: url(https://downloadscdn6.freepik.com/654080/2/1918.jpg?filename=karate-fighters-tatami-fighting-championship.jpg&token=exp=1744068263~hmac=85a03ec83cba336d66b00fd1f437ff75);
+    background-image: url(image4.jpg.jpg);
     padding-right: 30px;
     background-position: center;
     background-size:cover; 
@@ -795,16 +794,18 @@ padding-right: 100px;
   margin-left: 50px;
   border: orange 2px solid;
 }
-.kora1{
-   background-image: url(https://downloadscdn6.freepik.com/23/2151115/2151114139.jpg?filename=3d-gym-equipment.jpg&token=exp=1743862318~hmac=b988cf9b1422335b9f9c41004781a467);
-    padding-right: 30px;
-    background-position: center;
-    background-size:cover; 
+.kora1 {
+ background-image:url(image6.jpg.jpg);
+
+  padding-right: 30px;
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
-  height:300px;
+  height: 300px;
   margin-right: 50px;
-border: orange 2px solid;
+  border: orange 2px solid;
 }
+
 .kora2{
     background-image: url(https://media.istockphoto.com/id/1385093274/fr/photo/ring-de-boxe.jpg?s=1024x1024&w=is&k=20&c=Ob8D68ZoEyfAEQTT0lELlfaQFrIKZlMqYdheDM4i5sM=&p=1);
     border: orange 2px solid;
@@ -815,7 +816,7 @@ border: orange 2px solid;
   height:300px;
   margin-right: 50px;
 }
-/steps/
+/*steps*/
 .explore_grid{
     margin-top: 4rem;
     display: grid;
@@ -857,7 +858,7 @@ border: orange 2px solid;
 .explore_C{
     width: 300px;
     height: 200px;
-    background-image: url(../../Downloads/fitness_17973903.png);
+    background-image: url(image8.jpg.png);
     
     background-position: right;
     background-size: 200px;
@@ -899,11 +900,11 @@ border: orange 2px solid;
     
    
 }
-/blogs/
+/*blogs*/
 .bold{
     width: 100%;
     height: 1100px;
-    background-image: url(https://downloadscdn6.freepik.com/651396/2/1617.jpg?filename=woman-holding-weights-near-barbells.jpg&token=exp=1743944952~hmac=57361ff39e9028a908a8dae7af7be503&filename=1617.jpg);
+    background-image: url(photo.jpg.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -952,11 +953,11 @@ p{
 .list-group1{
     width: 800px;
     height: 600px;
-   background-image: url(../../Downloads/shirtless-bodybuilder-doing-side-plank-exercise.jpg);
+   background-image: url(image2.jpg.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    margin-left: 280px;
+    margin-left: 350px;
     margin-top: 100px;
 
 }

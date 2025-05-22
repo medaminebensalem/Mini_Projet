@@ -1,49 +1,13 @@
-<?php
-// Connexion à la base de données
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$dbname = 'akabd';
-
-$conn = new mysqli($host, $user, $pass, $dbname);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die('Connexion échouée : ' . $conn->connect_error);
-}
-
-// Traitement du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = htmlspecialchars($_POST['nom']);
-    $email = htmlspecialchars($_POST['email']);
-    $sujet = htmlspecialchars($_POST['sujet']);
-    $message = htmlspecialchars($_POST['message']);
-
-    $stmt = $conn->prepare("INSERT INTO messages (nom, email, sujet, message) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $nom, $email, $sujet, $message);
-
-    if ($stmt->execute()) {
-        echo "<p style='color: green;'>Message envoyé avec succès !</p>";
-    } else {
-        echo "<p style='color: red;'>Erreur : " . $stmt->error . "</p>";
-    }
-
-    $stmt->close();
-}
-$conn->close();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKA Sport.</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FiTnEss</title>
+    <link rel="stylesheet" href="teste.css">
 </head>
 <body>
   
-
     <header>
       <div class="wrapper"> 
           <h1>AKA sport <span class="orange">.</span></h1>
@@ -54,34 +18,34 @@ $conn->close();
                   <li><a href="#abonement">LES CLUBS</a></li>
                   <li><a href="#possibilite">ACTIVITE</a></li>
                   <li><a href="#contact">FP HEROES</a></li>
+                  
               </ul>
+      
+
           </nav>
       </div>
+      
      </header>
   
-
     <section id="main-image">
 			<div class="wrapper">
                 <h2 class="amin">Élève ton entraînement <br><strong class="tariq">et repousse tes limites avec AKA sport</strong></h2>
-                <strong><a href="auth/register.php" class="button-1">S'INCRIRE</a></strong>
+                <strong><a href="#" class="button-1">S'INCRIRE</a></strong>
 			</div>
-	</section>
-
-
+		</section>
         <section id="hamid">
-            <h1 class="texte-principal"> Fitness Park Salé : <hr class="ligne"> <br>  <h1 class="titre">Un Nouveau Chapitre pour la Communauté du Fitness</h1></h1>
+            <h1 class="texte-principal"> Fitness AKA SPORT : <hr class="ligne"> <br>  <h1 class="titre">Un Nouveau Chapitre pour la Communauté du Fitness</h1></h1>
             <div class="list-group1">
+
             </div>
             <div class="list-group2">
                 <p class="paraghraphe">Le 1er août dernier, Fitness Park a franchi une nouvelle étape importante avec l'ouverture officielle de notre club à Salé <br> Cet événement a été marqué par une ambiance festive, avec des démonstrations sportives,<br> des animations dynamiques, et la visite de nombreux passionnés de fitness venus découvrir nos infrastructures <br> de haut niveau. Grâce à un accueil chaleureux et à une équipe dévouée, cette journée a permis à la communauté de se <br> rassembler autour de nos valeurs de dépassement de soi et de convivialité</p>
                 <p  class="paraghraphe">L’accueil chaleureux réservé à tous les visiteurs a parfaitement reflété nos valeurs de dépassement de soi, de solidarité et <br> d’inclusion. Notre équipe, pleinement investie, a veillé à ce que chaque participant <br> se sente intégré à cette grande communauté qu’est Fitness Park. Au-delà des infrastructures ultramodernes, c’est  <br>cet esprit de famille et d’entraide qui fait la force de notre réseau.</p>
                 <p  class="paraghraphe">Le club de Salé est déjà devenu un lieu incontournable pour les amateurs de fitness de la région, renforçant notre engagement <br> à rendre l’expérience Fitness Park accessible à tous. Avec des équipements modernes, un  <br>accès multi-club, des cours collectifs variés et une ouverture de 6h à 23h, 7 jours sur 7, nous sommes prêts à  <br>accompagner les gens dans leurs objectifs tout au long de l’année.</p>
                 <p  class="paraghraphe">Que vous soyez un passionné de sport chevronné ou que vous cherchiez simplement à retrouver la forme, Fitness Park Salé est là <br>pour vous accompagner dans la réalisation de vos objectifs. Grâce à un environnement  <br>motivant et stimulant, chacun pourra s'entraîner à son rythme, dans une ambiance positive et conviviale</p>
+
             </div>
          </section>
-
-
-
         <section id="abonement">
             <div class="maClasse">
                 <h1 class="texte-principal">Trouve facilement <br>
@@ -130,7 +94,7 @@ $conn->close();
                 
                 <div class="kora2">
                     <div class="about_image">
-                    <img src="photo finess/article-image-2.jpg" alt="about">
+                    <img src="image7.jpg.jpg" alt="about">
                 </div>
             </div>
                 
@@ -151,11 +115,11 @@ $conn->close();
                     <p> Atteints tes objectifs sportifs dans une de nos salles Fitness Park au 
                         Maroc. Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, 
                         Musculation,  Cross-training  et Cours Collectifs pour effectuer tous tes entraînements </p>
-                        <a href="registration.php" class="read_more">s'incrire</a>
+                        <a href="#" class="read_more">s'incrire</a>
                 </div>
                 <div class="kora"> 
                     <div class="about_image">
-                    <img src="c:\Users\HP\Downloads\group-young-teens-celebrating-world-youth-day-by-doing-activities-together.jpg" alt="about">
+                    <img src="image5.jpg.jpg" alt="about">
                 </div>
             </div>
                
@@ -165,7 +129,8 @@ $conn->close();
             <section class="about">
                 <div class="kora1">
                     <div class="about_image">
-                    <img src="" alt="about">
+                   <img src="3d-gym-equipment (2).jpg" alt="about">
+
                 </div>
             </div>
                 
@@ -175,7 +140,7 @@ $conn->close();
                     <p> Atteints tes objectifs sportifs dans une de nos salles Fitness Park au 
                         Maroc. Que tu sois un pratiquant débutant ou confirmé, retrouve des espaces Cardio, 
                         Musculation,  Cross-training  et Cours Collectifs pour effectuer tous tes entraînements </p>
-                        <a href="registration.php" class="read_more">s'incrire</a>
+                        <a href="#" class="read_more">s'incrire</a>
                 </div>
             </section>
         </div>
@@ -266,21 +231,27 @@ $conn->close();
                 <p>Bienvenue chez <strong> Sport</strong>, le club où passion, discipline et performance se rencontrent ! Que vous souhaitiez améliorer votre condition physique, perfectionner vos techniques de combat ou simplement adopter un mode de vie plus actif, notre salle est faite pour vous.</p>
          </div>
          <div class="contact_form"> 
-         <form action="index.php" method="POST">
-        <label>Nom :</label><br>
-        <input type="text" name="nom" required><br><br>
+           <form action="contact.php" method="POST">
 
-        <label>Email :</label><br>
-        <input type="email" name="email" required><br><br>
-
-        <label>Sujet :</label><br>
-        <input type="text" name="sujet" required><br><br>
-
-        <label>Message :</label><br>
-        <textarea name="message" rows="5" required></textarea><br><br>
-
-        <input type="submit" value="Envoyer">
-    </form>
+            <h3 class="title">Contact us</h3>
+            <div class="input_continaire">
+                <input type="text" name="name" class="input">
+                <label for="">Username</label>
+            </div>
+            <div class="input_continaire">
+                <input type="email" name="email" class="input">
+                <label for="">Email</label>
+            </div>
+            <div class="input_continaire">
+                <input type="tel" name="tel" class="input">
+                <label for="">Phone</label>
+            </div>
+            <div class="input_continaire">
+                <textarea name="mesage" class="input"></textarea>
+                <label for="">Message</label>
+            </div>
+            <input type="submit" value="send" class="btn3">
+           </form>
      </div>
                
             </div>
