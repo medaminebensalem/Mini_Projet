@@ -992,3 +992,43 @@ p{
    color: black;
    
 }
+/* Sticky Header */
+header {
+  transition: all 0.3s ease;
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Animation des sections */
+section.invisible {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bouton retour haut */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  display: none;
+  background-color: #f90;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 999;
+}
