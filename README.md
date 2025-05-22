@@ -18,5 +18,12 @@ Le site a pour objectif de présenter les services, les tarifs, les horaires, et
 - JavaScript 
 - php
 
+![Aperçu](images/1(1).png)
+![Aperçu](images/1(2).png)
+![Aperçu](images/1(3).png)
+![Aperçu](images/1(4).png)
+![Aperçu](images/1(5).png)
+
+
 
 
